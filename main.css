@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "AdiHaus";
+  src: URL("https://assets.codepen.io/6060109/adihaus_regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AdiHaus";
+  src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+.logo {
+  padding: 15px;
+}
+
+#hero-img {
+  background-size: cover;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-image: url("https://assets.codepen.io/6060109/athlete-girl.png");
+}
+
+#hero-img-desktop {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.full-page {
+  height: 100vh;
+}
+
+.content > h2 {
+  /* margin: 10px auto 0; */
+  font-family: "adihaus", regular;
+  font-size: 3.5em;
+}
+
+.we {
+  color: #cd3a24;
+  font-weight: normal;
+  letter-spacing: 5px;
+}
+
+.coming-soon {
+  color: #423a3a;
+}
+
+.all-container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.main-content {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "adihaus", regular;
+  font-weight: regular;
+  font-size: 14px;
+  color: #333333;
+  line-height: 28px;
+}
+
+form {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1em auto 0;
+}
+
+button {
+  width: 20%;
+  height: 40px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: -5px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 75%;
+  box-sizing: border-box;
+  margin-bottom: 25px; /* fix for no bottom margin */
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    justify-content: left;
+  }
+
+  #hero-img {
+    display: none;
+  }
+  #hero-img-desktop {
+    display: block;
+    width: 50%;
+    background-image: url("https://assets.codepen.io/6060109/athlete-big.png");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+    background-size: cover;
+  }
+
+  .full-page {
+    display: flex;
+    justify-content: space-between;
+  }
+  .all-container {
+    margin: 0;
+    text-align: left;
+  }
+  .main-content {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .content {
+    text-align: left;
+  }
+}
